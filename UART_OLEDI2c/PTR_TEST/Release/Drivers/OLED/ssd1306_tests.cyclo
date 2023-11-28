@@ -1,0 +1,13 @@
+../Drivers/OLED/ssd1306_tests.c:112:6:ssd1306_TestBorder	11
+../Drivers/OLED/ssd1306_tests.c:138:6:ssd1306_TestFonts1	1
+../Drivers/OLED/ssd1306_tests.c:168:6:sm_test1	1
+../Drivers/OLED/ssd1306_tests.c:183:6:ssd1306_TestFonts2	1
+../Drivers/OLED/ssd1306_tests.c:205:6:ssd1306_TestFPS	2
+../Drivers/OLED/ssd1306_tests.c:243:6:ssd1306_TestLine	1
+../Drivers/OLED/ssd1306_tests.c:251:6:ssd1306_TestRectangle	2
+../Drivers/OLED/ssd1306_tests.c:261:6:ssd1306_TestRectangleFill	1
+../Drivers/OLED/ssd1306_tests.c:269:6:ssd1306_TestCircle	3
+../Drivers/OLED/ssd1306_tests.c:284:6:ssd1306_TestArc	1
+../Drivers/OLED/ssd1306_tests.c:291:6:ssd1306_TestPolyline	2
+../Drivers/OLED/ssd1306_tests.c:308:6:ssd1306_TestDrawBitmap	1
+../Drivers/OLED/ssd1306_tests.c:323:6:ssd1306_TestAll	1

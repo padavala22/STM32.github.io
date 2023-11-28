@@ -1,0 +1,36 @@
+2023-11-21 07:11:43,311 [INFO] WebApp:330 - JxBrowser engine has been closed 
+2023-11-21 07:13:30,814 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 426068376 Bytes (803209216)
+2023-11-21 07:13:32,984 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 403457848 Bytes (803209216)
+2023-11-21 07:13:35,366 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 409494448 Bytes (803209216)
+2023-11-21 07:13:36,822 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-11-21 07:13:36,822 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-11-21 07:13:36,823 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-11-21 07:13:36,825 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-11-21 07:13:36,825 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-11-21 07:13:36,838 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-11-21 07:13:38,430 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\MXTmpFiles\license.tmp_save
+2023-11-21 07:13:42,379 [ERROR] LocalSettings:60 - multiple points
+2023-11-21 07:13:42,379 [ERROR] LocalSettings:60 - multiple points
+2023-11-21 07:13:44,333 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\MXTmpFiles\license.tmp
+2023-11-21 07:13:45,159 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\MXTmpFiles\gpio.tmp_save
+2023-11-21 07:13:47,826 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\MXTmpFiles\gpio.tmp
+2023-11-21 07:13:48,149 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Src\stm32f4xx_it.c_save
+2023-11-21 07:13:49,793 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\Core\Src\stm32f4xx_it.c
+2023-11-21 07:13:49,974 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Inc\stm32f4xx_it.h_save
+2023-11-21 07:13:50,263 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\Core\Inc\stm32f4xx_it.h
+2023-11-21 07:13:50,346 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Src\stm32f4xx_hal_msp.c_save
+2023-11-21 07:13:50,689 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\Core\Src\stm32f4xx_hal_msp.c
+2023-11-21 07:13:50,714 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\MXTmpFiles\system.tmp_save
+2023-11-21 07:13:50,908 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\MXTmpFiles\system.tmp
+2023-11-21 07:13:51,008 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Inc\stm32f4xx_hal_conf.h_save
+2023-11-21 07:13:51,297 [INFO] CodeEngine:335 - Generated code: C:\Users\PGR\test\test\Core\Inc\stm32f4xx_hal_conf.h
+2023-11-21 07:13:51,461 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Inc\main.h_save
+2023-11-21 07:13:51,812 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\Core\Inc\main.h
+2023-11-21 07:13:51,870 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\PGR\test\test\Core\Src\main.c_save
+2023-11-21 07:13:52,351 [INFO] CodeEngine:279 - Generated code: C:\Users\PGR\test\test\Core\Src\main.c
+2023-11-21 07:13:56,813 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 506mS.
+2023-11-21 07:13:56,844 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-11-21 07:13:59,149 [INFO] ConfigFileManager:1457 - The Die is : DIE431
+2023-11-21 07:14:08,509 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 11664mS.
+2023-11-21 07:14:08,510 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-11-21 07:14:08,517 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.

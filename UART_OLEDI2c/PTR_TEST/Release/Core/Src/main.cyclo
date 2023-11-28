@@ -1,0 +1,7 @@
+../Core/Src/main.c:76:6:fun_state_a	1
+../Core/Src/main.c:84:6:fun_state_b	1
+../Core/Src/main.c:92:6:fun_state_c	1
+../Core/Src/main.c:100:6:fun_state_d	1
+../Core/Src/main.c:182:6:SystemClock_Config	3
+../Core/Src/main.c:115:5:main	2
+../Core/Src/main.c:231:6:Error_Handler	1

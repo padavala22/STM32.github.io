@@ -1,0 +1,132 @@
+#include "stm32f4xx_hal.h"
+#include "ssd1306.h" // Include your OLED driver library
+
+// Enumeration for OLED states
+typedef enum {
+    IDLE_STATE,
+    DISPLAY_TEXT_STATE,
+    DISPLAY_IMAGE_STATE
+} OledState;
+
+// Structure representing the Finite State Machine for OLED
+typedef struct {
+    OledState currentState;
+    void (*stateFunction)();
+} OledStateMachine;
+
+// Function prototypes for state functions
+void idleState();
+void displayTextState();
+void displayImageState();
+
+// Function to transition to a new state
+void transitionToState(OledStateMachine *machine, OledState newState, void (*newStateFunction)());
+
+// Initialize the OLED
+void OLED_Init(void);
+
+// I2C handle
+I2C_HandleTypeDef hi2c1;
+
+// OLED handle
+SSD1306_HandleTypeDef hOled;
+
+int main(void) {
+    // Initialize the HAL Library
+    HAL_Init();
+
+    // Configure the system clock
+    SystemClock_Config();
+
+    // Initialize the OLED display
+    OLED_Init();
+
+    // Create and initialize the OLED state machine
+    OledStateMachine oled;
+    oled.currentState = IDLE_STATE;
+    oled.stateFunction = idleState;
+
+    // Simulate state transitions
+    transitionToState(&oled, DISPLAY_TEXT_STATE, displayTextState);
+    HAL_Delay(2000); // Delay for visibility
+
+    transitionToState(&oled, DISPLAY_IMAGE_STATE, displayImageState);
+    HAL_Delay(2000); // Delay for visibility
+
+    transitionToState(&oled, IDLE_STATE, idleState);
+
+    // Main loop
+    while (1) {
+        // Execute the current state's function
+        oled.stateFunction();
+    }
+}
+
+// Function to initialize the OLED display
+void OLED_Init(void) {
+    // Initialize the I2C peripheral
+    HAL_InitTick(0); // Initialize HAL tick timer (if not already initialized)
+    HAL_InitTick(0); // Initialize HAL tick timer (if not already initialized)
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_RCC_I2C1_CLK_ENABLE();
+
+    // Configure I2C pins
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = GPIO_PIN_6 | GPIO_PIN_9; // I2C1 SCL and SDA pins
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF4_I2C1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    // I2C configuration
+    hi2c1.Instance = I2C1;
+    hi2c1.Init.ClockSpeed = 400000;
+    hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+    hi2c1.Init.OwnAddress1 = 0;
+    hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+    hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+    hi2c1.Init.OwnAddress2 = 0;
+    hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+    hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+
+    if (HAL_I2C_Init(&hi2c1) != HAL_OK) {
+        Error_Handler();
+    }
+
+    // Initialize the OLED library
+    SSD1306_Init(&hOled, &hi2c1);
+}
+
+// Function to transition to a new state
+void transitionToState(OledStateMachine *machine, OledState newState, void (*newStateFunction)()) {
+    machine->currentState = newState;
+    machine->stateFunction = newStateFunction;
+}
+
+// State functions
+void idleState() {
+    SSD1306_Clear(&hOled);
+    SSD1306_DrawText(&hOled, 0, 0, "Idle State", &Font_11x18, SSD1306_COLOR_WHITE);
+    SSD1306_UpdateScreen(&hOled);
+}
+
+void displayTextState() {
+    SSD1306_Clear(&hOled);
+    SSD1306_DrawText(&hOled, 0, 0, "Display Text", &Font_11x18, SSD1306_COLOR_WHITE);
+    SSD1306_UpdateScreen(&hOled);
+}
+
+void displayImageState() {
+    SSD1306_Clear(&hOled);
+    SSD1306_DrawImage(&hOled, 0, 0, 128, 64, your_image_data_here); // Replace with your image data
+    SSD1306_UpdateScreen(&hOled);
+}
+
+// Handle errors
+void Error_Handler(void) {
+    while (1) {
+        // Error occurred, stay in this loop
+    }
+}

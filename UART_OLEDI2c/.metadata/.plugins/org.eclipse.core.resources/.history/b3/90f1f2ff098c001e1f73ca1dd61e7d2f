@@ -1,0 +1,13 @@
+/*
+ * SM_test.c
+ *
+ *  Created on: Nov 25, 2023
+ *      Author: PGR
+ */
+
+#include <stdio.h>
+
+void state_a (void){
+
+	printf("In the state");
+}

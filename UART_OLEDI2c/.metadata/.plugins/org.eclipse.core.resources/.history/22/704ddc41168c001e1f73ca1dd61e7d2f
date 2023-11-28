@@ -1,0 +1,13 @@
+/*
+ * SM_test.h
+ *
+ *  Created on: Nov 25, 2023
+ *      Author: PGR
+ */
+
+#ifndef INC_SM_TEST_H_
+#define INC_SM_TEST_H_
+void state_a (void);
+
+
+#endif /* INC_SM_TEST_H_ */
